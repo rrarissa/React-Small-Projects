@@ -3,7 +3,7 @@ redux
 design the store
 define the actions
 create reducers
-
+create a store
 
 1. design the store
 
@@ -18,7 +18,7 @@ create reducers
 reducer is a function
 
 let lastID=0
-function reducer(state, action){
+export default function reducer(state, action){
 if (action.type ==='bugAdded')
 return [...state, {
 id: ++lastID,
@@ -31,3 +31,17 @@ else if (action.type ==='.  '){
 
 
 }
+
+
+4.create a store
+
+import {createStore} from 'redux';
+import reducer from './reducer'
+
+const store = createStore(reducer);
+export default store;
+
+
+5. dispatch
+
+import store from './store'

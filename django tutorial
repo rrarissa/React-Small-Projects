@@ -1,0 +1,23 @@
+1. views.py
+
+
+def viewname(request):
+  return_
+  
+ 
+ 2. add url
+ 
+ add urls.py 在子app里面，先加上url，记得import view
+ 
+ 3. include new url to the main urls.py
+ 
+ 
+ 
+ create database
+ use model.Models
+ 
+ 1. first: make migrations 
+ 
+ 需要在admin.py 这样才能显示变量
+ from .models import Item
+admin.site.register(Item)
